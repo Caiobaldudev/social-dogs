@@ -6,9 +6,15 @@
   display: grid;
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;
+  overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
+}
+
+.single.photo {
+  grid-template-columns: 1fr;
+  height: auto;
 }
 
 @keyframes scaleUp {
@@ -22,12 +28,30 @@
   padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+  padding: 1rem 0px 0px 0px;
+}
+
 .img {
   grid-row: 1/4;
 }
 
-.comments {
-  padding: 0 2rem;
+.single .img {
+  grid-row: 1;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+@media (max-width: 64rem) {
+  .photo {
+    height: auto;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    grid-template-columns: minmax(20rem, 40rem);
+  }
+  .img {
+    grid-row: 1;
+  }
 }
 
 .author {
@@ -43,11 +67,12 @@
 }
 
 .visualizacoes::before {
-  content: "";
+  content: '';
+  display: inline-block;
   width: 16px;
   height: 10px;
   margin-right: 0.5rem;
-  background: url("../../Assets/visualizacao-black.svg");
+  background: url('../../Assets/visualizacao-black.svg');
 }
 
 .attributes {
@@ -63,7 +88,7 @@
 }
 
 .attributes li::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 20px;
   margin-right: 0.5rem;
@@ -72,17 +97,4 @@
   width: 2px;
   background: #333;
   margin-top: 5px;
-}
-
-@media (max-width: 64rem) {
-  .photo {
-    height: auto;
-    max-height: calc(100vh - 4rem);
-    overflow-y: auto;
-    grid-template-columns: minmax(20rem, 40rem);
-  }
-
-  .img {
-    grid-row: 1;
-  }
 }

@@ -22,7 +22,8 @@
 @keyframes skeleton {
   from {
     background-position: 0px;
-  } to {
+  }
+  to {
     background-position: -200%;
   }
 }

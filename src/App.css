@@ -1,26 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  padding-top: 4rem;
+  margin: 0px;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
-  --type-second: 'Spectral', georgia;
+  --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
-  padding-top: 4rem;
 }
 
-h1, h2, h3, h4, p {
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 img {
@@ -28,16 +33,12 @@ img {
   max-width: 100%;
 }
 
-button, input {
+button,
+input {
   display: block;
   font-size: 1rem;
   font-family: var(--type-first);
   color: #333;
-}
-
-input {
-  display: block;
-  margin-bottom: 1rem;
 }
 
 a {
@@ -64,8 +65,8 @@ a {
   z-index: 1;
 }
 
-.title::after{
-  content: "";
+.title::after {
+  content: '';
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -73,14 +74,14 @@ a {
   position: absolute;
   bottom: 5px;
   left: -5px;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   z-index: -1;
 }
 
-.animeLeft{
+.animeLeft {
   opacity: 0;
   transform: translateX(-20px);
-  animation: animeLeft .3s forwards;
+  animation: animeLeft 0.3s forwards;
 }
 
 @keyframes animeLeft {
@@ -88,4 +89,18 @@ a {
     opacity: 1;
     transform: initial;
   }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
+
+.VictoryContainer {
+  height: initial !important;
 }

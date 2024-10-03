@@ -4,7 +4,7 @@
   line-height: 1;
   border: 1px solid transparent;
   font-size: 0.875rem;
-  font-family: var(--font-first);
+  font-family: var(--type-first);
   cursor: pointer;
   border-radius: 0.4rem;
   transition: 0.1s;

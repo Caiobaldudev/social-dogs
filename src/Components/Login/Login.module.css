@@ -7,14 +7,15 @@
 
 .login::before {
   display: block;
-  content: "";
-  background: url("../../Assets/login.jpg") no-repeat center center;
+  content: '';
+  background: url('../../Assets/login.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .forms {
-  max-width: 80rem;
+  max-width: 30rem;
   padding: 1rem;
+  margin-top: 20vh;
 }
 
 @media (max-width: 40rem) {
